@@ -1,0 +1,141 @@
+.navbarTop {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Vertically center the navbar items */
+  color: rgba(103, 116, 142, 1);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: static;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1); /* Light background color */
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add spacing from navbar items */
+}
+
+.languageSelector span {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* Space between each nav item */
+  margin-left: auto; /* Pushes the nav list to the right */
+  align-items: center; /* Vertically align list items to the center */
+}
+
+.navList li {
+  margin: 0;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: rgba(103, 116, 142, 1); /* Dark grey color */
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navList li a:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  background-color: rgba(52, 99, 175, 1);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+/* Hamburger Menu Icon */
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbarTop {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    align-items:center;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+    height: auto; /* Make sure it doesn't take full height */
+  }
+
+  .navList.showMenu {
+    display: flex; /* Display when menu is open */
+  }
+
+  .navList li {
+    margin: 10px 0;
+  }
+
+  .loginButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .languageSelector {
+    margin-bottom: 10px;
+  }
+
+  /* Show the hamburger menu icon */
+  .menuIcon {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbarTop {
+    padding: 10px 15px;
+  }
+
+  .navList {
+    margin-top: 10px;
+  }
+
+  .navList li {
+    margin: 8px 0;
+  }
+
+  .loginButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .languageSelector {
+    margin-bottom: 15px;
+  }
+}
